@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ConsoleApp2;
+using CustomListProject;
 namespace UnitTestProject1
 {
     [TestClass]

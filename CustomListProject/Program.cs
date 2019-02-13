@@ -11,19 +11,13 @@ namespace CustomListProject
 
         static void Main(string[] args)
         {
-            List<int> list = new List<int>();
-            list.Add(2);
-            list.Add(4);
-            list.Add(6);
-            list.Add(24);
-            list.Add(13);
-            list.Add(1);
-            list.Add(12);
-            int c = list.Count;
-            Console.WriteLine(c);
-            list.Add(11);
-            Console.WriteLine(list.Count);
-            list.Remove(12);
+            CustomList<int> custom = new CustomList<int>();
+            custom.Add(1);
+            custom.Add(2);
+            custom.Add(3);
+            custom.Add(4);
+            custom.Remove(2);
+            
         }
     }   
 }
