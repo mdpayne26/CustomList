@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListProject;
+
+
 namespace UnitTestProject1
 {
     [TestClass]
@@ -87,11 +89,13 @@ namespace UnitTestProject1
             int value = 1;
             int value1 = 2;
             int value2 = 3;
+            int value3 = 4;
             int expectedResult = 2;
             //Act
             custom.Add(value);
             custom.Add(value1);
             custom.Add(value2);
+            custom.Add(value3);
             custom.Remove(value);
             //Assert
             Assert.AreEqual(expectedResult, custom.Count);
@@ -104,11 +108,13 @@ namespace UnitTestProject1
             int value = 1;
             int value1 = 2;
             int value2 = 3;
+            int value3 = 4;
             int expectedResult = 1;
             //Act
             custom.Add(value);
             custom.Add(value1);
             custom.Add(value2);
+            custom.Add(value3);
             custom.Remove(value1);
             custom.Remove(value2);
             //Assert
@@ -119,24 +125,59 @@ namespace UnitTestProject1
         {
             //Arrange
             CustomList<int> custom = new CustomList<int>();
+            int value = 1;
+            int value1 = 2;
+            int value2 = 3;
+            int value3 = 4;
+            int expectedResult = 1;
             //Act
+            custom.Add(value);
+            custom.Add(value1);
+            custom.Add(value2);
+            custom.Add(value3);
+            custom.Remove(value1);
+            custom.Remove(value2);
+            custom.Remove(value3);
             //Assert
+            Assert.AreEqual(expectedResult, custom[0]);
         }
         [TestMethod]
         public void RemoveAtIndex()
         {
             //Arrange
             CustomList<int> custom = new CustomList<int>();
+            int value = 1;
+            int value1 = 2;
+            int value2 = 3;
+            int value3 = 4;
+            int expectedResult = 3;
             //Act
+            custom.Add(value);
+            custom.Add(value1);
+            custom.Add(value2);
+            custom.Add(value3);
+            custom.Remove(1);
             //Assert
+            Assert.AreEqual(expectedResult, custom[1]);
         }
         [TestMethod]
         public void Remove()
         {
             //Arrange
             CustomList<int> custom = new CustomList<int>();
+            int value = 1;
+            int value1 = 2;
+            int value2 = 3;
+            int value3 = 4;
+            int expectedResult = 3;
             //Act
+            custom.Add(value);
+            custom.Add(value1);
+            custom.Add(value2);
+            custom.Add(value3);
+            custom.Remove(value);
             //Assert
+            Assert.AreEqual(expectedResult, custom.Count);
         }
         [TestMethod]
         public void ListToString()
