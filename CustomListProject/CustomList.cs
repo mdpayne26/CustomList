@@ -92,12 +92,13 @@ namespace CustomListProject
         }
         public override string ToString()
         {
-            string changeToString = " ";
+            string changeToString = "";
             for (int i = 0; i < count; i++)
             {
                 changeToString = changeToString + items[i] + " ";
             }
-            return changeToString;
+
+            return changeToString.Trim();
         }
 
 

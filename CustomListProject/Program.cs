@@ -16,7 +16,8 @@ namespace CustomListProject
             custom.Add(2);
             custom.Add(3);
             custom.Add(4);
-            custom.Remove(2);
+            //custom.Remove(2);
+            Console.WriteLine("1 2 3 4 ");
 
         }
     }   
